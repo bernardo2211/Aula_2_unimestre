@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    
+    <title>Loja 102,03% Oficial do Grêmio</title>
+</head>
+<body class="bg-dark text-white">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-secondary">
+        <a class="navbar-brand" href="#">Loja 102,03% Oficial do Grêmio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#produtos">Produtos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cartao">Cartão</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="produtos" class="text-center mt-4">
+        <h1>Loja de muitos produtos bacanudos e maneiros</h1>
+        <p>Futebol é correria, se fosse pra pensar eu jogava Xadrez</p>
+        
+        <!-- Botão para mostrar ou ocultar os filtros -->
+        <button id="toggleFilters" class="btn btn-primary">Mostrar filtros</button>
+    
+        <!-- Contêiner das opções de filtro, inicialmente oculto -->
+        <div id="filterOptions" class="filtro-container mt-4" style="display: none;">
+            <h3>Filtrar por preço:</h3>
+            <div class="price-filter-options">
+                <span class="price-filter-option" data-value="50">Até R$ 50</span>
+                <span class="price-filter-option" data-value="500">Até R$ 500</span>
+                <span class="price-filter-option" data-value="all">Todos</span>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+ 
+
+    <!-- Produtos -->
+    <section class="container mt-4">
+        <div class="row justify-content-center" id="productList">
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-secondary">
+                    <img src="https://lojasradan.vtexassets.com/arquivos/ids/414259/camisa-masculina-umbro-gremio-of3-2023-N9-u31g02056-131-preto-10.30854-a.jpg" class="card-img-top" alt="Camisa preta oficial do Grêmio">
+                    <div class="card-body text-center">
+                        <p class="card-text">Camisa preta do Grêmio</p>
+                        <p class="card-text">R$ 367,59</p>
+                        <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-secondary">
+                    <img src="https://arteemminiaturas.com.br/webapps/imagefile/arquivos/boneco-do-dinho-bonecos-gremio-10024-01.jpg" class="card-img-top" alt="Boneco do jogador Dinho, ídolo do Grêmio">
+                    <div class="card-body text-center">
+                        <p class="card-text">Boneco top do Grêmio</p>
+                        <p class="card-text">R$ 25,99</p>
+                        <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card bg-dark text-white border-secondary">
+                    <img src="https://cdnv2.moovin.com.br/bigcap/imagens/produtos/det/bone-luis-suarez--5ea71e1cb8a5e376721b339cddb94287.jpg" class="card-img-top" alt="Boné do Luis Suárez, jogador do Grêmio">
+                    <div class="card-body text-center">
+                        <p class="card-text">Boné do melhor Jogador da história</p>
+                        <p class="card-text">R$ 999,99</p>
+                        <button class="btn btn-primary add-to-cart">Adicionar ao Carrinho</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <h1>Área de pagamento</h1>
+        </div>
+    </section>
+
+    <!-- Cartão de Crédito -->
+    <section id="cartao" class="mt-4">
+        <div class="card-container">
+            <div class="credit-card" id="credit-card">
+                <div class="card-front">
+                    <div class="card-header">
+                        <img src="massacinzentazoiudo.jpeg" alt="Icone pequeno" class="card-icon">
+                        <span class="card-title">Cartão 100% Confiável</span>
+                    </div>
+                    <p>
+                        <input type="text" class="checkout-input checkout-card" placeholder="8888 8888 8888 8888" maxlength="19">
+                    </p>
+                    <p>
+                        <input type="text" class="checkout-input checkout-name" placeholder="Seu nome" maxlength="25">
+                    </p>
+                    <p class="exp-date-container">
+                        <input type="text" class="checkout-input checkout-exp" placeholder="MM" maxlength="2">
+                        <input type="text" class="checkout-input checkout-exp" placeholder="YY" maxlength="2">
+                        <button type="button" class="flip-btn" id="flip-to-back">Inserir CVV</button>
+                    </p>
+                </div>
+                <div class="card-back">
+                    <div class="black-strip"></div>
+                    <p>
+                        <input type="text" class="checkout-input checkout-cvc" placeholder="CVV" maxlength="3">
+                    </p>
+                    <p>
+                        <button type="button" class="flip-btn" id="flip-to-front">Voltar</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrinho de Compras -->
+
+    <section class="text-center mt-4">
+        <h3>Carrinho de Compras</h3>
+        <ul id="cartItems" class="list-unstyled"></ul>
+        <p>Total: R$ <span id="cartTotal">0.00</span></p>
+    
+        <!-- Parcelamento com estilo de dropdown customizado -->
+        <div id="installmentsSection" class="mt-3" style="display: none;">
+            <h4>Escolha o número de parcelas:</h4>
+            <div class="dropdown-custom">
+                <button id="installmentDropdownBtn" class="btn btn-primary dropdown-toggle" type="button">
+                    Escolher Parcelas
+                </button>
+                <ul id="installmentOptions" class="dropdown-menu-custom">
+                    <li class="dropdown-item" data-value="1">À vista</li>
+                    <li class="dropdown-item" data-value="2">2 vezes</li>
+                    <li class="dropdown-item" data-value="5">5 vezes</li>
+                    <li class="dropdown-item" data-value="12">12 vezes</li>
+                </ul>
+            </div>
+            <p id="installmentInfo" class="mt-2"></p>
+        </div>
+    
+        <button id="finalizePurchase" class="btn btn-success mt-3" disabled>Finalizar Compra</button>
+    
+        <div id="purchaseMessage" class="alert alert-success mt-3" style="display: none;">
+            Compra finalizada!
+        </div>
+    </section>
+    
+    
+    
+  
+
+    <!-- Footer -->
+    <footer class="text-center py-3 border-top border-secondary mt-4">
+        <p>Bernardo Gremista &copy; 2024</p>
+    </footer>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
